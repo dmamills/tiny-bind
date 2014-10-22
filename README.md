@@ -1,6 +1,6 @@
 # tiny-bind
 
-Fun with Object.observe! A simple data binding example.
+Fun with Object.observe! A simple data binding example. See a demo [here](http://dmamills.github.io/tiny-bind/)
 
 ### Usage
 

@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Tiny Bind Example</title>
+	<meta name="description" content="tiny bind">
+	<meta name="author" content="Daniel Mills">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="hero-unit">
+					<h1>
+						tiny-bind
+						<small>Simple databinding using Object.observe</small>
+					</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<h3>Example</h3>
+				<p>Bind a variable to a dom element</p>
+				<pre>&lt;h3 data-bind="counter"&gt;&lt;/h3&gt;</pre>
+				<p>Create an tinybind object</p>
+
+<pre> var tb = new TinyBind({
+	name:'counter',
+	default:0,
+	add:function(change) { console.log('add!'); },
+	update:function(change) { console.log('update!'); },
+	delete:function(change) { console.log('delete!'); }
+});</pre>
+
+				<p>Do something with it:</p>
+<pre>setInterval(function() {
+	var v = tb.get();
+	tb.set(++v);
+},1000);</pre>
+
+				<p>Then watch the magic happen:</p>
+				<pre><h3 data-bind="counter">????</h3></pre>
+			</div>
+		</div>
+		<hr>
+		<footer>
+			<p>
+			 	<a href="http://github.com/dmamills/tiny-bind"><i class="fa fa-github-alt fa-2x"></i></a>
+				<a href="http://yomills.com">Daniel Mills</a> 2014
+			</p>
+		</footer>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/tiny-bind.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

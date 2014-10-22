@@ -15,21 +15,19 @@ Create a dom element to bind to with the `data-bind` attribute
 
 Create an TinyBind instance, then use it!
 ```
-
-var tb = TinyBind({
+var tb = new TinyBind({
 	name:'counter',
 	default:0,
 	add:function(change) { console.log('add!'); },
 	update:function(change) { console.log('update!'); },
- 	delete:function(change) { console.log('delete!'); }
+	delete:function(change) { console.log('delete!'); }
 });
 
 setInterval(function() {
-	tb.counter++;
+	var v = tb.get();
+	tb.set(++v);
 },1000);
-
 ```
-
 
 ### License
 MIT

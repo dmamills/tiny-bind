@@ -1,0 +1,18 @@
+{
+  "name": "tiny-bind",
+  "version": "0.0.1",
+  "description": "",
+  "private": "true",
+  "author": {
+    "name": "Daniel Mills",
+    "email": "mills.dma@gmail.com",
+    "url": "http://yomills.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp-uglify": "^1.0.1",
+    "gulp": "^3.8.9",
+    "gulp-watch": "^1.1.0",
+    "gulp-rename": "^1.2.0"
+  }
+}

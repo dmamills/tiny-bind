@@ -1,0 +1,25 @@
+{
+  "name": "tiny-bind",
+  "main": "tiny-bind.js",
+  "version": "0.0.1",
+  "authors": [
+    "Daniel Mills <mills.dma@gmail.com>"
+  ],
+  "description": "simple data binding with Object.observe",
+  "keywords": [
+    "data",
+    "binding",
+    "observe",
+    "observable"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/dmamills/tiny-bind",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}

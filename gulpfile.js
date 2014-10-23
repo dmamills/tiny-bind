@@ -9,7 +9,14 @@ gulp.task('compress',function() {
 	.pipe(gulp.dest('lib'))
 });
 
+gulp.task('democopy',function() {
+	gulp.src('lib/tiny-bind.min.js')
+	.pipe(gulp.dest('demo/js'));
+	gulp.src('lib/tiny-bind.js')
+	.pipe(gulp.dest('demo/js'));
+});
+
 gulp.task('watch',function() {
-	gulp.watch('lib/tiny-bind.js',['compress']);
+	gulp.watch('lib/tiny-bind.js',['compress','democopy']);
 });
 

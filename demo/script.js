@@ -11,7 +11,11 @@ setInterval(function() {
 	tb.set(++v);
 },1000);
 
-var incr = new TinyBind({
-	name:'incr',
-	default:0
+var nameObj = new TinyBind({
+	name:'name',
+	default:''
 });
+
+var nameEl = document.getElementById('name');
+nameEl.addEventListener('keydown',function() {nameObj.set(nameEl.value); });
+nameEl.addEventListener('keyup',function() {nameObj.set(nameEl.value); });

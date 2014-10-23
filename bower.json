@@ -1,7 +1,7 @@
 {
   "name": "tiny-bind",
   "main": "tiny-bind.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "Daniel Mills <mills.dma@gmail.com>"
   ],
